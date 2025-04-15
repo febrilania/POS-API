@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UnitController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,7 +26,11 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::apiResource('units', UnitController::class);
 
     //item
+    Route::apiResource('items', ItemController::class);
     
+    //transaksi
+    Route::apiResource('transactions', TransactionController::class);
+
 });
 
 Route::post('register', [AuthController::class, 'register']);

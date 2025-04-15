@@ -16,4 +16,17 @@ class Item extends Model
         'price',
         'stock'
     ];
+
+    public function unit(){
+        return $this->belongsTo(Unit::class);
+    }
+
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
+
+    public function transaction_detail(){
+        return $this->belongsTo(TransactionDetail::class);
+    }
+
 }
