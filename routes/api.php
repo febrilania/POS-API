@@ -29,6 +29,7 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::apiResource('items', ItemController::class);
     
     //transaksi
+    Route::get('/transactions/report', [TransactionController::class, 'report']);
     Route::apiResource('transactions', TransactionController::class);
 
 });

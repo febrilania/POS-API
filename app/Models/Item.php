@@ -25,8 +25,8 @@ class Item extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function transaction_detail(){
-        return $this->belongsTo(TransactionDetail::class);
+    public function transaction_details(){
+        return $this->hasMany(TransactionDetail::class);
     }
 
 }
